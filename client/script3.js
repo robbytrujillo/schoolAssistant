@@ -25,10 +25,7 @@ form.addEventListener("submit", async function (e) {
   input.value = "";
 
   // Tampilkan indikator loading
-  const loadingMessage = appendMessage(
-    "bot",
-    "School Assistant sedang berpikir...",
-  );
+  const loadingMessage = appendMessage("bot", "Gemini sedang berpikir...");
 
   try {
     const response = await fetch(API_URL, {
@@ -52,8 +49,7 @@ form.addEventListener("submit", async function (e) {
     // Hapus pesan loading
     loadingMessage.remove();
 
-    const botResponse =
-      data.result || "Maaf, School Assistant tidak memberikan jawaban.";
+    const botResponse = data.result || "Maaf, Gemini tidak memberikan jawaban.";
 
     // Tampilkan jawaban Gemini
     appendMessage("bot", botResponse);
