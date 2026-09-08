@@ -2,6 +2,7 @@ const form = document.getElementById("chat-form");
 const input = document.getElementById("user-input");
 const chatBox = document.getElementById("chat-box");
 
+// const API_URL = "http://localhost:3000/api/chat";
 const API_URL = "http://localhost:3000/api/chat";
 
 let conversation = [];
